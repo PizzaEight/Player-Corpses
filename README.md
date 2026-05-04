@@ -1,4 +1,4 @@
-This mod/datapack uses the mannequin entity as a corpse for when the player dies! ✨
+This datapack/mod uses the mannequin entity as a corpse for when the player dies! ✨
 
 Corpses 💀
 It makes it so that instead of players dropping their items around randomly, they will now leave behind a corpse with their skin and name from which they can later retrieve their stuff.
