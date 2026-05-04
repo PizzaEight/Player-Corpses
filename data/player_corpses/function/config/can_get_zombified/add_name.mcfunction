@@ -1,0 +1,4 @@
+execute if score Config has_player_name matches 1 run tag @e[type=armor_stand,tag=player_corpses.corpse,tag=!player_corpses.named_zombie] remove player_corpses.unnamed_zombie
+execute if score Config has_player_name matches 1 as @e[type=armor_stand,tag=player_corpses.corpse,tag=!player_corpses.named_zombie] on vehicle at @s run data modify entity @n[type=armor_stand,tag=!player_corpses.named_zombie,tag=player_corpses.corpse] CustomName set from entity @s CustomName 
+execute if score Config has_player_name matches 1 as @e[type=armor_stand,tag=player_corpses.corpse,tag=!player_corpses.named_zombie] run data merge entity @s {CustomNameVisible:1b}
+execute if score Config has_player_name matches 1 run tag @e[type=armor_stand,tag=player_corpses.corpse,tag=!player_corpses.named_zombie] add player_corpses.named_zombie

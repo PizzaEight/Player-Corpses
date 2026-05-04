@@ -1,0 +1,1 @@
+execute as @a[predicate=!player_corpses:version_number] run function player_corpses:update_version
