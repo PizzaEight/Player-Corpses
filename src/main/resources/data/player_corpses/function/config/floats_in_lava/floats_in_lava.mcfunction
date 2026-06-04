@@ -1,0 +1,9 @@
+execute unless score Config floats_in_lava matches 1 run return fail
+execute if score Config floats_in_lava matches 1 run schedule function player_corpses:config/floats_in_lava/floats_in_lava 1 
+execute if score Config floats_in_water matches 1 unless entity @e[type=minecraft:mannequin,tag=player_corpses.corpse,predicate=player_corpses:in_lava] run return fail
+execute if score Config floats_in_lava matches 1 if score Config burns_in_lava matches 1 as @e[type=minecraft:mannequin,tag=player_corpses.corpse] at @s if predicate player_corpses:in_lava run data merge entity @s {Fire:5}
+execute if score Config floats_in_lava matches 1 as @e[type=minecraft:mannequin,tag=player_corpses.corpse] at @s if block ~ ~ ~ lava[level=0] if block ~ ~0.3 ~ #player_corpses:passable_lava run tp @s ~ ~0.05 ~
+execute if score Config floats_in_lava matches 1 as @e[type=minecraft:mannequin,tag=player_corpses.corpse] at @s if block ~ ~0.2 ~ lava[level=1] if block ~ ~0.3 ~ #player_corpses:passable_lava run tp @s ~ ~0.05 ~
+execute if score Config floats_in_lava matches 1 as @e[type=minecraft:mannequin,tag=player_corpses.corpse] at @s if block ~ ~0.4 ~ lava[level=2] if block ~ ~0.3 ~ #player_corpses:passable_lava run tp @s ~ ~0.05 ~
+execute if score Config floats_in_lava matches 1 as @e[type=minecraft:mannequin,tag=player_corpses.corpse] at @s if block ~ ~ ~ lava unless block ~ ~ ~ lava[level=0] unless block ~ ~ ~ lava[level=1] unless block ~ ~ ~ lava[level=2] if block ~ ~1 ~ lava run tp @s ~ ~0.05 ~
+execute if score Config floats_in_lava matches 1 as @e[type=minecraft:mannequin,tag=player_corpses.corpse] at @s if predicate player_corpses:in_lava unless block ~ ~ ~ lava run tp @s ~ ~0.05 ~

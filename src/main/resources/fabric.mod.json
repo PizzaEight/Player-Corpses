@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "mr_player_deathcorpses",
+  "version": "${version}",
+  "name": "Player Corpses",
+  "description": "When the player dies they will now leave behind a corpse from which they can later retrieve their items",
+  "authors": [
+    "PizzaEight"
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/datapack/player-death-corpses",
+    "sources": "https://github.com/PizzaEight/Player-Corpses",
+    "issues": "https://github.com/PizzaEight/Player-Corpses"
+  },
+  "license": "CC-BY-NC-SA-4.0",
+  "icon": "pack.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.pizzaeight.player_corpses.PlayerCorpsesMod"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.14.0",
+    "fabric-resource-loader-v0": "*",
+    "minecraft": ">=1.21-",
+    "java": ">=25",
+    "trinkets": "*"
+  }
+}

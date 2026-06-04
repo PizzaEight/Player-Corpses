@@ -1,0 +1,1 @@
+$tag @e[tag=player_corpses.corpse,tag=$(name)] remove player_corpses.latest

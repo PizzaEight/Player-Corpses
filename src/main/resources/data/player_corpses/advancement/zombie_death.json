@@ -1,0 +1,20 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:entity_killed_player",
+      "conditions": {
+        "entity": {
+          "type": "#player_corpses:zombies"
+        },
+        "killing_blow": {
+          "source_entity": {
+            "type": "#player_corpses:zombies_2"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "player_corpses:config/can_get_zombified/zombification"
+  }
+}
