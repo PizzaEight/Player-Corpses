@@ -1,0 +1,15 @@
+execute store result score @s player_corpses.uuid run data get entity @s UUID[0]
+execute store result score @s player_corpses.uuid2 run data get entity @s UUID[1]
+execute store result score @s player_corpses.uuid3 run data get entity @s UUID[2]
+execute store result score @s player_corpses.uuid4 run data get entity @s UUID[3]
+execute if score Config can_only_be_looted_by_owner matches 1 as @s[tag=!player_corpses.msg_cooldown] at @s if entity @e[type=minecraft:mannequin,tag=player_corpses.corpse,tag=player_corpses.searching] unless score @s player_corpses.uuid = @n[type=minecraft:mannequin,tag=player_corpses.corpse] player_corpses.uuid run function player_corpses:count_fail
+execute if score Config can_only_be_looted_by_owner matches 1 as @s at @s unless score @s player_corpses.uuid = @n[type=minecraft:mannequin,tag=player_corpses.corpse,tag=player_corpses.searching] player_corpses.uuid run return fail
+execute if score Config can_only_be_looted_by_owner matches 1 as @s[tag=!player_corpses.msg_cooldown] at @s if entity @e[type=minecraft:mannequin,tag=player_corpses.corpse,tag=player_corpses.searching] unless score @s player_corpses.uuid2 = @n[type=minecraft:mannequin,tag=player_corpses.corpse] player_corpses.uuid2 run function player_corpses:count_fail
+execute if score Config can_only_be_looted_by_owner matches 1 as @s at @s unless score @s player_corpses.uuid2 = @n[type=minecraft:mannequin,tag=player_corpses.corpse,tag=player_corpses.searching] player_corpses.uuid2 run return fail
+execute if score Config can_only_be_looted_by_owner matches 1 as @s[tag=!player_corpses.msg_cooldown] at @s if entity @e[type=minecraft:mannequin,tag=player_corpses.corpse,tag=player_corpses.searching] unless score @s player_corpses.uuid3 = @n[type=minecraft:mannequin,tag=player_corpses.corpse] player_corpses.uuid3 run function player_corpses:count_fail
+execute if score Config can_only_be_looted_by_owner matches 1 as @s at @s unless score @s player_corpses.uuid3 = @n[type=minecraft:mannequin,tag=player_corpses.corpse,tag=player_corpses.searching] player_corpses.uuid3 run return fail
+execute if score Config can_only_be_looted_by_owner matches 1 as @s[tag=!player_corpses.msg_cooldown] at @s if entity @e[type=minecraft:mannequin,tag=player_corpses.corpse,tag=player_corpses.searching] unless score @s player_corpses.uuid4 = @n[type=minecraft:mannequin,tag=player_corpses.corpse] player_corpses.uuid4 run function player_corpses:count_fail
+execute if score Config can_only_be_looted_by_owner matches 1 as @s at @s unless score @s player_corpses.uuid4 = @n[type=minecraft:mannequin,tag=player_corpses.corpse,tag=player_corpses.searching] player_corpses.uuid4 run return fail
+tag @s add player_corpses.correct
+execute unless score Config has_gore matches 1 at @s run playsound minecraft:block.note_block.pling player @s ~ ~ ~ 1 1
+function player_corpses:get_items
