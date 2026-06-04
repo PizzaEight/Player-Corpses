@@ -1,4 +1,0 @@
-execute unless score Config saves_items_from_void matches 1 run return fail
-execute if score Config saves_items_from_void matches 1 run schedule function player_corpses:config/saves_items_from_void/saves_items_from_void 1
-execute if score Config saves_items_from_void matches 1 as @e[type=minecraft:mannequin,tag=player_corpses.corpse,nbt={OnGround:0b},predicate=player_corpses:in_void,predicate=!player_corpses:in_overworld] at @s run tp @s ~ ~0.1 ~
-execute if score Config saves_items_from_void matches 1 as @e[type=minecraft:mannequin,tag=player_corpses.corpse,nbt={OnGround:0b},predicate=player_corpses:in_void_overworld,predicate=player_corpses:in_overworld] at @s run tp @s ~ ~0.1 ~
