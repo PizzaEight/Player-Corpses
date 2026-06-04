@@ -203,6 +203,9 @@ public class PlayerCorpsesMod implements ModInitializer {
         if (incoming.isEmpty())
             return incoming;
 
+        if (isBackpack(incoming))
+            return incoming;
+
         java.util.List<ItemStack> backpacks = new java.util.ArrayList<>();
         for (int i = 0; i < player.getInventory().getContainerSize(); i++) {
             ItemStack stack = player.getInventory().getItem(i);
