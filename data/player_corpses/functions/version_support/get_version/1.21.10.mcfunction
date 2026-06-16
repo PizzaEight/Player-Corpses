@@ -1,0 +1,1 @@
+scoreboard players set Config player_corpses.game_version 210

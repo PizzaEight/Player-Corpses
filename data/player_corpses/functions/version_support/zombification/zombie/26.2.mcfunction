@@ -1,0 +1,2 @@
+execute if score Config player_corpses.game_version matches 262.. if score Config can_get_zombified matches 1 run function player_corpses:version_support/zombification/zombie/26.2_2
+advancement revoke @s only player_corpses:26.2/zombie_death_26.2

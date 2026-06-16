@@ -1,0 +1,1 @@
+execute as @e[type=minecraft:text_display,tag=player_corpses.corpse,tag=player_corpses.1,tag=!player_corpses.uncounting] on vehicle unless entity @s[tag=player_corpses.kept] on passengers as @s[tag=player_corpses.1] at @s unless entity @a[tag=player_corpses.correct,predicate=player_corpses:26.2/shift_key,distance=0..2] run scoreboard players remove @s despawn_timer_seconds 1

@@ -1,0 +1,1 @@
+execute as @e[type=minecraft:text_display,tag=player_corpses.killable] at @s unless predicate player_corpses:26.2/on_corpse run kill @s

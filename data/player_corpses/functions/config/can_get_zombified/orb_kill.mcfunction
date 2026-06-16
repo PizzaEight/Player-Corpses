@@ -1,0 +1,6 @@
+execute store result storage player_corpses:death_coords xp_levels double 1 run scoreboard players get @n[type=minecraft:experience_orb,tag=player_corpses.orb,distance=0..4] player_corpses.xp_levels
+execute store result storage player_corpses:death_coords xp_points double 1 run scoreboard players get @n[type=minecraft:experience_orb,tag=player_corpses.orb,distance=0..4] player_corpses.xp_points
+execute as @s if score @n[type=minecraft:experience_orb,tag=player_corpses.orb,distance=0..4] player_corpses.xp_levels matches 1.. run playsound minecraft:entity.player.levelup player @a ~ ~ ~ 0.5 1
+execute as @s at @s if score @n[type=minecraft:experience_orb,tag=player_corpses.orb,distance=0..4] player_corpses.xp_points matches 1.. unless score @n[type=minecraft:experience_orb,tag=player_corpses.orb,distance=0..4] player_corpses.xp_levels matches 1.. run playsound minecraft:entity.experience_orb.pickup player @a ~ ~ ~ 0.5 1
+execute as @s run function player_corpses:give_xp with storage player_corpses:death_coords
+execute as @n[type=minecraft:experience_orb,tag=player_corpses.orb,distance=0..4] run kill @s
