@@ -1,7 +1,0 @@
-{
-  "condition": "minecraft:entity_scores",
-  "entity": "this",
-  "scores": {
-    "player_corpses.version": 30
-  }
-}
