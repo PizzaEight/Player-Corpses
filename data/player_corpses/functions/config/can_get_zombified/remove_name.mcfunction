@@ -1,0 +1,4 @@
+execute unless score Config has_player_name matches 1 as @e[type=armor_stand,tag=player_corpses.corpse,tag=!player_corpses.unnamed_zombie] run data remove entity @s CustomName
+execute unless score Config has_player_name matches 1 as @e[type=armor_stand,tag=player_corpses.corpse,tag=!player_corpses.unnamed_zombie] run data remove entity @s CustomNameVisible
+execute unless score Config has_player_name matches 1 run tag @e[type=armor_stand,tag=player_corpses.corpse,tag=!player_corpses.unnamed_zombie] remove player_corpses.named_zombie
+execute unless score Config has_player_name matches 1 run tag @e[type=armor_stand,tag=player_corpses.corpse,tag=!player_corpses.unnamed_zombie] add player_corpses.unnamed_zombie

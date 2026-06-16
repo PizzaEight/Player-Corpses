@@ -1,0 +1,19 @@
+particle block{block_state:"minecraft:redstone_block"} ~ ~1 ~ 0.3 0.5 0.3 1 100 normal
+execute at @s run playsound minecraft:entity.generic.hurt player @a ~ ~ ~ 0.3 0.8
+execute at @s run playsound minecraft:entity.generic.death player @a ~ ~ ~ 0.3 1
+execute at @s run playsound minecraft:entity.generic.big_fall player @a ~ ~ ~ 1 0
+execute at @s run playsound minecraft:block.metal.break player @a ~ ~ ~ 1 1.2
+execute at @s run playsound minecraft:block.honey_block.break player @a ~ ~ ~ 0.5
+summon item ~ ~0.2 ~ {Age:5950,Motion:[0.0, 0.3, 0.1],Tags:["player_corpses.bone"],PickupDelay:655340,Item:{id:"minecraft:poisonous_potato",count:1,components:{"minecraft:tooltip_display":{hide_tooltip:true},"minecraft:custom_data":{player_corpses:item},"!minecraft:consumable":{},"minecraft:item_model":"bone","minecraft:max_stack_size":1}}}
+summon item ~ ~0.2 ~ {Age:5950,Motion:[0.1, 0.2, -0.1],Tags:["player_corpses.bone"],PickupDelay:655340,Item:{id:"minecraft:poisonous_potato",count:1,components:{"minecraft:tooltip_display":{hide_tooltip:true},"minecraft:custom_data":{player_corpses:item},"!minecraft:consumable":{},"minecraft:item_model":"bone","minecraft:max_stack_size":1}}}
+summon item ~ ~0.2 ~ {Age:5950,Motion:[0.1, 0.4, 0.0],Tags:["player_corpses.bone"],PickupDelay:655340,Item:{id:"minecraft:poisonous_potato",count:1,components:{"minecraft:tooltip_display":{hide_tooltip:true},"minecraft:custom_data":{player_corpses:item},"!minecraft:consumable":{},"minecraft:item_model":"bone","minecraft:max_stack_size":1}}}
+execute if predicate player_corpses:50_pct run summon item ~ ~0.2 ~ {Age:5950,Motion:[-0.1, 0.4, 0.1],Tags:["player_corpses.bone"],PickupDelay:655340,Item:{id:"minecraft:poisonous_potato",count:1,components:{"minecraft:tooltip_display":{hide_tooltip:true},"minecraft:custom_data":{player_corpses:item},"!minecraft:consumable":{},"minecraft:item_model":"bone","minecraft:max_stack_size":1}}}
+execute if predicate player_corpses:10_pct run summon item ~ ~0.2 ~ {Age:5950,Motion:[0.0, 0.4, 0.0],Tags:["player_corpses.bone"],PickupDelay:655340,Item:{id:"minecraft:poisonous_potato",count:1,components:{"minecraft:tooltip_display":{hide_tooltip:true},"minecraft:custom_data":{player_corpses:item},"!minecraft:consumable":{},"minecraft:item_model":"skeleton_skull","minecraft:max_stack_size":1}}}
+
+summon item ~ ~0.2 ~ {Age:5950,Motion:[0.0, 0.3, -0.1],Tags:["player_corpses.bone","player_corpses.blood"],PickupDelay:655340,Item:{id:"minecraft:poisonous_potato",count:1,components:{"minecraft:tooltip_display":{hide_tooltip:true},"minecraft:custom_data":{player_corpses:item},"!minecraft:consumable":{},"minecraft:item_model":"redstone","minecraft:max_stack_size":1}}}
+summon item ~ ~0.2 ~ {Age:5950,Motion:[0.1, 0.3, 0.1],Tags:["player_corpses.bone","player_corpses.blood"],PickupDelay:655340,Item:{id:"minecraft:poisonous_potato",count:1,components:{"minecraft:tooltip_display":{hide_tooltip:true},"minecraft:custom_data":{player_corpses:item},"!minecraft:consumable":{},"minecraft:item_model":"redstone","minecraft:max_stack_size":1}}}
+execute if predicate player_corpses:50_pct run summon item ~ ~0.2 ~ {Age:5950,Motion:[-0.1, 0.4, 0.0],Tags:["player_corpses.bone","player_corpses.blood"],PickupDelay:655340,Item:{id:"minecraft:poisonous_potato",count:1,components:{"minecraft:tooltip_display":{hide_tooltip:true},"minecraft:custom_data":{player_corpses:item},"!minecraft:consumable":{},"minecraft:item_model":"redstone","minecraft:max_stack_size":1}}}
+execute if predicate player_corpses:50_pct run summon item ~ ~0.2 ~ {Age:5950,Motion:[-0.1, 0.4, -0.1],Tags:["player_corpses.bone","player_corpses.blood"],PickupDelay:655340,Item:{id:"minecraft:poisonous_potato",count:1,components:{"minecraft:tooltip_display":{hide_tooltip:true},"minecraft:custom_data":{player_corpses:item},"!minecraft:consumable":{},"minecraft:item_model":"redstone","minecraft:max_stack_size":1}}}
+tp ~ -100000 ~
+kill @s
+execute on passengers run kill @s
