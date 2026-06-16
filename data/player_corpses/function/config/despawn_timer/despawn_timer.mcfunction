@@ -1,2 +1,0 @@
-execute as @s[scores={config=999}] as @e[type=minecraft:text_display,tag=player_corpses.corpse] run scoreboard players add @s despawn_timer 1
-execute as @s[scores={config=1000}] as @e[type=minecraft:text_display,tag=player_corpses.corpse,scores={despawn_timer=1..}] run scoreboard players remove @s despawn_timer 1
