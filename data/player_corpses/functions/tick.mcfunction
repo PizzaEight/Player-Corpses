@@ -1,0 +1,7 @@
+execute as @a[scores={player_corpses.died=1..}] at @s run function player_corpses:when_dead
+#Predicate compatability for 26.1 and 26.2
+execute if score Config player_corpses.game_version matches ..261 run function player_corpses:version_support/tick/26.1
+execute if score Config player_corpses.game_version matches 262.. run function player_corpses:version_support/tick/26.2
+execute as @a[gamemode=!spectator] at @s if entity @e[type=minecraft:experience_orb,tag=player_corpses.orb,distance=0..4] run function player_corpses:config/can_get_zombified/orb_kill
+execute as @a[scores={config=1..}] run function player_corpses:config/function
+execute as @a[scores={corpse_finder=1..}] run function player_corpses:corpse_finder/corpse_finder

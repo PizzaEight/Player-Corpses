@@ -1,0 +1,2 @@
+execute as @e[type=minecraft:interaction,tag=player_corpses.interaction,predicate=!player_corpses:26.1/corpse_vehicle] at @s run tag @n[type=minecraft:mannequin,tag=player_corpses.corpse,tag=player_corpses.right_clickable,tag=!player_corpses.kept,predicate=!player_corpses:26.1/interactable] remove player_corpses.right_clickable
+execute as @e[type=minecraft:interaction,tag=player_corpses.interaction,predicate=!player_corpses:26.1/corpse_vehicle] run kill @s

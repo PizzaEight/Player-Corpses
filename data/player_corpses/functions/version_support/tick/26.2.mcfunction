@@ -1,0 +1,1 @@
+execute as @e[type=minecraft:armor_stand,tag=player_corpses.corpse] at @s unless predicate player_corpses:26.2/zombie_vehicle run function player_corpses:give_items/armor_stand_kill

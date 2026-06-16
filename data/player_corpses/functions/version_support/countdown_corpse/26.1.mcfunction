@@ -1,0 +1,6 @@
+execute as @a[gamemode=!spectator,predicate=player_corpses:26.1/shift_key] at @s unless entity @e[type=minecraft:mannequin,tag=player_corpses.corpse,distance=0..2,tag=!player_corpses.kept] run scoreboard players set @s player_corpses.score 5
+execute as @a[gamemode=!spectator,nbt={OnGround:1b}] at @s unless score Config can_be_looted_from_right_clicking matches 1 if predicate player_corpses:26.1/shift_key if entity @n[type=minecraft:mannequin,tag=player_corpses.corpse,distance=0..2,tag=!player_corpses.kept] run function player_corpses:count
+execute as @a[gamemode=!spectator,nbt={OnGround:1b}] at @s if predicate player_corpses:26.1/shift_key if entity @e[type=minecraft:mannequin,tag=player_corpses.corpse,distance=0..2,tag=!player_corpses.kept] run scoreboard players remove @s player_corpses.score 1
+execute as @a[gamemode=!spectator] at @s unless predicate player_corpses:26.1/shift_key run scoreboard players set @s player_corpses.score 5
+execute as @a[gamemode=!spectator] at @s unless predicate player_corpses:26.1/shift_key run tag @s remove player_corpses.correct
+execute as @a[gamemode=!spectator] at @s unless predicate player_corpses:26.1/shift_key unless score Config can_be_looted_from_right_clicking matches 1 run tag @s remove player_corpses.msg_cooldown
