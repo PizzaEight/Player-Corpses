@@ -1,0 +1,20 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:entity_killed_player",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:husk"
+        },
+        "killing_blow": {
+          "source_entity": {
+            "type": "minecraft:husk"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "player_corpses:version_support/zombification/husk/26.1"
+  }
+}
