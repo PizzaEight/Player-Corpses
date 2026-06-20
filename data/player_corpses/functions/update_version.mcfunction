@@ -71,6 +71,7 @@ execute unless score Config remove_corpse_finder matches 0..1 run scoreboard pla
 execute unless score Config remove_config matches 0..1 run scoreboard players set Config remove_config 0
 
 execute as @a unless score Config load matches 1 run function player_corpses:config/show_first_time
+execute as @a unless score Config load matches 1 run function player_corpses:version_support/get_version/get_version
 
 scoreboard players set Config load 0
 scoreboard players set Config load 1
