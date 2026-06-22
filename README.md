@@ -16,7 +16,7 @@ The Corpse Finder Screen allows the player to see all the currently loaded corps
 
 Can be accessed by typing: /trigger corpse_finder
 
-Configeration Screen ⚙️ 
+Configuration Screen ⚙️ 
 
 The Config Screen offers many options for players to choose how they want the pack to work to match their playstyle.
 
